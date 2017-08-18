@@ -1,6 +1,6 @@
 <?php
 /**
- * This are the settings for backend admin page. This includes a settings
+ * These are the settings for backend admin page. This includes a settings
  * tab and help tab. This page will show under the setttings menus 
  * unless the wp-swift-admin-menu plugin is activated where it will show
  * show under that menu instead.
