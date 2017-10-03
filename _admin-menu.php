@@ -228,8 +228,13 @@ function wp_swift_faq_cpt_checkbox_visibility_render( ) {
 function wp_swift_faq_cpt_help_shortcode_render( ) { 
 ?>
 <pre class="prettyprint custom">
-// WordPress shortcode
+// Questions
 [faq]
+
+// Question categories
+[faq-cat]
+[faq-cat to-do="true"]
+[faq-cat answers="true"]
 </pre>
 <?php
 }

@@ -52,6 +52,7 @@ class Wp_Swift_Faq_Cpt_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 		add_shortcode( 'faq', array($this, 'faq_func') );
+		add_shortcode( 'faq-cat', array($this, 'faq_cat_func') );
 	}
 
 	// [faq foo="foo-value"]
@@ -84,6 +85,23 @@ class Wp_Swift_Faq_Cpt_Public {
 		return $html;
 	}
 
+	public function faq_cat_func( $atts ) {
+		$atts = shortcode_atts(
+			array(
+				'to-do' => false,
+				'answers' => false,
+			), 
+		$atts, 'bartag' );
+		$debug = $atts['to-do'];
+		$answers = $atts['answers'];
+		
+        $html='';
+		ob_start();
+		require_once plugin_dir_path( __FILE__ ) . 'partials/wp-swift-faq-taxonomy-public-display.php';
+		$html = ob_get_contents();
+		ob_end_clean();		
+		return $html;
+	}
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *

@@ -64,12 +64,13 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wp-swift-faq-cpt.php';
  */
 
 /**
- * The custom post type.
+ * The custom post type and taxonomy.
  *
  * @author 	 Gary Swift 
  * @since    1.0.0
  */
 require plugin_dir_path( __FILE__ ) . 'cpt/_cpt-register.php';
+require plugin_dir_path( __FILE__ ) . 'cpt/_taxonomy-register.php';
 
 /**
  * The posts screen columns.
